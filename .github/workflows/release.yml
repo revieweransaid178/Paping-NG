@@ -49,9 +49,7 @@ jobs:
     - name: Find and Rename binary (Windows)
       if: runner.os == 'Windows'
       shell: pwsh
-      run: |
-        $bin = Get-ChildItem -Path build -Filter *.exe -Recurse | Select-Object -First 1
-        Copy-Item $bin.FullName -Destination ${{ matrix.out_name }}
+      run: Copy-Item "build/Release/paping.exe" -Destination ${{ matrix.out_name }}
 
     - name: Rename binary (Linux / macOS)
       if: runner.os != 'Windows'

